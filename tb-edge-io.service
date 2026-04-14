@@ -1,0 +1,16 @@
+[Unit]
+Description=ThingsBoard Edge IO Gateway (Modbus + DI/DO + RPC)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/circuit_python
+Environment=TB_EDGE_IO_CONFIG=/root/circuit_python/config.json
+ExecStart=/root/circuit_python/.venv/bin/python /root/circuit_python/edge_gateway.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

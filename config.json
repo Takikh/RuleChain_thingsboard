@@ -1,0 +1,37 @@
+{
+  "thingsboard": {
+    "host": "10.0.0.15",
+    "port": 1883,
+    "access_token": "UKYJs0rT8EnN9vEi43kR",
+    "client_id": "ALG16025001",
+    "telemetry_interval_sec": 1
+  },
+  "io": {
+    "onboard_di": ["DI1", "DI2", "DI3", "DI4"],
+    "onboard_do": ["DO1", "DO2", "DO3", "DO4"],
+    "onboard_ai": ["AI1", "AI2", "AI3", "AI4"],
+    "expansion_di": ["DIO5", "DIO6", "DIO7", "DIO8", "DIO9", "DIO10", "DIO11", "DIO12"],
+    "expansion_do": ["DIO13", "DIO14", "DIO15", "DIO16"]
+  },
+  "modbus": {
+    "enabled": true,
+    "port": "/dev/ttySC0",
+    "baudrate": 4800,
+    "stopbits": 1,
+    "bytesize": 8,
+    "parity": "N",
+    "timeout": 1,
+    "polls": [
+      {"key": "temperature", "slave_id": 1, "function_code": 4, "address": 1, "divider": 10},
+      {"key": "humidity", "slave_id": 1, "function_code": 4, "address": 0, "divider": 10},
+      {"key": "Motion", "slave_id": 2, "function_code": 4, "address": 3},
+      {"key": "smoke", "slave_id": 3, "function_code": 4, "address": 3}
+    ]
+  },
+  "mppt": {
+    "enabled": false,
+    "port": "/dev/USB0",
+    "baudrate": 19200,
+    "slave_id": 1
+  }
+}
