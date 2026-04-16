@@ -4,7 +4,17 @@
     "port": 1883,
     "access_token": "UKYJs0rT8EnN9vEi43kR",
     "client_id": "ALG16025001",
-    "telemetry_interval_sec": 1
+    "telemetry_interval_sec": 1,
+    "snapshot_interval_sec": 1.0,
+    "gpio_poll_interval_sec": 0.2,
+    "gpio_output_poll_interval_sec": 1.0,
+    "gpio_read_timeout_sec": 0.2,
+    "gpio_write_timeout_sec": 0.4,
+    "max_end_to_end_latency_ms": 300,
+    "telemetry_buffer_size": 2048,
+    "gpio_workers": 8,
+    "publish_ack_timeout_sec": 0.6,
+    "require_publish_ack": false
   },
   "io": {
     "onboard_di": ["DI1", "DI2", "DI3", "DI4"],
